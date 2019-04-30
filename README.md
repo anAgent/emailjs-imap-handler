@@ -4,6 +4,8 @@
 
 Parses and compiles IMAP commands.
 
+This fork replaces the `fromCharCode` with a better decoder.
+
 ## Usage
 
 ```

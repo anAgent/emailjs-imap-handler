@@ -167,22 +167,6 @@ describe('IMAP Command Parser', function () {
         value: 'DEFGH'
       }])
     })
-
-    it('should not explode on invalid char', function () {
-      expect(parser(str2arr('* 1 FETCH (BODY[] "\xc2")')).attributes).to.deep.equal([{
-        type: 'ATOM',
-        value: 'FETCH'
-      },
-      [{
-        type: 'ATOM',
-        value: 'BODY',
-        section: []
-      }, {
-        type: 'STRING',
-        value: '\xc2'
-      }]
-      ])
-    })
   })
 
   //  The following 4 tests are added as part of solution and verification
